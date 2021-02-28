@@ -59,6 +59,26 @@ class MVVMExerciseTests: XCTestCase {
         XCTAssertEqual(company.name,"Romaguera-Crona")
     }
     
+    func testFetchUser() throws{
+        let userExpectation = expectation(description: "users")
+        let session: URLSession = .shared
+        var users = [User]()
+        session.request(.users, using: Void()) {(result) in
+            userExpectation.fulfill()
+            switch result{
+            case .success(let response):
+                users = response
+            case .failure(let _):
+                users = []
+            }
+        }
+        waitForExpectations(timeout: 5) { (error) in
+            XCTAssertNotNil(users)
+            XCTAssertTrue(users.count > 0)
+            XCTAssertTrue(users.first?.id == 1)
+        }
+    }
+    
     func testMarkFavouriteAndUnFavouriteUser() throws{
         guard
             let path = Bundle.main.path(forResource: "dummy", ofType: "json")
