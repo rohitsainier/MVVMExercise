@@ -25,6 +25,11 @@ class DetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        delegate?.didUpdateUsersData(user: user)
+    }
+    
     private func configUI(){
         userDetailsLbl.text = "\(user.name) Details"
         nameLbl.text = user.name
@@ -44,7 +49,6 @@ class DetailsViewController: UIViewController {
             user.isFavourite = true
             starBtn.setImage(UIImage(named: "star_selected")!, for: .normal)
         }
-        delegate?.didUpdateUsersData(user: user)
     }
     
 }

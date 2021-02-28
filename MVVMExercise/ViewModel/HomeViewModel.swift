@@ -11,10 +11,12 @@ protocol DetailDelegate {
     func didUpdateUsersData(user: User)
 }
 
+
 protocol HomeDelegate {
     func didLoadUsers()
     func didErrorInLoadingUsers(msg:String)
 }
+
 
 protocol HomeUseCases {
     func fetchUsers(session: URLSession)
@@ -27,6 +29,7 @@ class HomeViewModel{
 }
 
 extension HomeViewModel:HomeUseCases{
+    //Update Favourite user
     func updateUserById(user: User) {
         if let index = users.firstIndex(where: {$0.id == user.id}){
             users[index] = user
@@ -34,6 +37,7 @@ extension HomeViewModel:HomeUseCases{
         }
     }
     
+    //fetch users list
     func fetchUsers(session: URLSession = .shared){
         session.request(.users, using: Void()) { [weak self] (result) in
             guard let `self` = self else{return}
