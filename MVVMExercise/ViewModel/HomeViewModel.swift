@@ -7,14 +7,18 @@
 
 import UIKit
 
+protocol DetailDelegate {
+    func didUpdateUsersData(user: User)
+}
+
 protocol HomeDelegate {
-    func didUsersLoaded()
+    func didLoadUsers()
     func didErrorInLoadingUsers(msg:String)
 }
 
 protocol HomeUseCases {
     func fetchUsers(session: URLSession)
-    func naviagateToDetailsVC(SELF: UIViewController,user:User)
+    func updateUserById(user:User)
 }
 
 class HomeViewModel{
@@ -23,10 +27,11 @@ class HomeViewModel{
 }
 
 extension HomeViewModel:HomeUseCases{
-    func naviagateToDetailsVC(SELF:UIViewController,user:User) {
-        let vc: DetailsViewController = Storyboard.Main.load.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-        vc.user = user
-        SELF.navigationController?.pushViewController(vc, animated: true)
+    func updateUserById(user: User) {
+        if let index = users.firstIndex(where: {$0.id == user.id}){
+            users[index] = user
+            delegate?.didLoadUsers()
+        }
     }
     
     func fetchUsers(session: URLSession = .shared){
@@ -36,7 +41,7 @@ extension HomeViewModel:HomeUseCases{
             case .success(let response):
                 print(response)
                 self.users = response
-                self.delegate?.didUsersLoaded()
+                self.delegate?.didLoadUsers()
             case .failure(let err):
                 print(err)
                 self.delegate?.didErrorInLoadingUsers(msg: err.localizedDescription)

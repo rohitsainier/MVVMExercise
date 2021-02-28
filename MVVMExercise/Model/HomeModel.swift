@@ -12,7 +12,7 @@ struct User: Codable {
     let address: Address?
     let phone, website: String
     let company: Company?
-    let isFavourite:Bool
+    var isFavourite:Bool
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)

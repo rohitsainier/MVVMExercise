@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4TI-hU-pjH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -50,9 +51,80 @@
                     <view key="view" contentMode="scaleToFill" id="5hR-7m-98I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuE-ww-cqH">
+                                <rect key="frame" x="164.5" y="114" width="85" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yag-b3-Zra">
+                                <rect key="frame" x="20" y="154.5" width="374" height="134.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3a-56-XZR">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5F-JJ-Bdg">
+                                        <rect key="frame" x="0.0" y="28.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcr-AL-uI7">
+                                        <rect key="frame" x="0.0" y="57" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmO-n7-d6X">
+                                        <rect key="frame" x="0.0" y="85.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemIndigoColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMt-4o-9bt">
+                                        <rect key="frame" x="0.0" y="114" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Act-No-51Z">
+                                <rect key="frame" x="182" y="329" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tPU-SZ-fa1"/>
+                                    <constraint firstAttribute="width" constant="50" id="xQp-TX-Gpj"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="clickStarBtn:" destination="fRr-v6-Hl5" eventType="touchUpInside" id="Cve-TM-3zT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0cm-qS-Uvr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Act-No-51Z" firstAttribute="top" secondItem="Yag-b3-Zra" secondAttribute="bottom" constant="40" id="8n0-j9-eCo"/>
+                            <constraint firstItem="AuE-ww-cqH" firstAttribute="centerX" secondItem="5hR-7m-98I" secondAttribute="centerX" id="CLF-uf-NNw"/>
+                            <constraint firstItem="Yag-b3-Zra" firstAttribute="top" secondItem="AuE-ww-cqH" secondAttribute="bottom" constant="20" id="Ngj-Sf-C6B"/>
+                            <constraint firstItem="AuE-ww-cqH" firstAttribute="top" secondItem="0cm-qS-Uvr" secondAttribute="top" constant="70" id="fbF-0J-3Zu"/>
+                            <constraint firstItem="0cm-qS-Uvr" firstAttribute="trailing" secondItem="Yag-b3-Zra" secondAttribute="trailing" constant="20" id="h5A-BL-wtl"/>
+                            <constraint firstItem="Yag-b3-Zra" firstAttribute="leading" secondItem="0cm-qS-Uvr" secondAttribute="leading" constant="20" id="jaH-hW-VJf"/>
+                            <constraint firstItem="Act-No-51Z" firstAttribute="centerX" secondItem="5hR-7m-98I" secondAttribute="centerX" id="ql2-YR-gP2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cmpLbl" destination="FMt-4o-9bt" id="2gi-Rv-PlD"/>
+                        <outlet property="nameLbl" destination="A3a-56-XZR" id="tAE-OS-oT6"/>
+                        <outlet property="phoneLbl" destination="Gcr-AL-uI7" id="VLl-Fw-V3g"/>
+                        <outlet property="starBtn" destination="Act-No-51Z" id="4fm-7L-ztW"/>
+                        <outlet property="userDetailsLbl" destination="AuE-ww-cqH" id="Pmo-Tb-Zjo"/>
+                        <outlet property="usernameLbl" destination="R5F-JJ-Bdg" id="ULK-n1-g0c"/>
+                        <outlet property="websiteLbl" destination="xmO-n7-d6X" id="S2z-Sx-R4I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tE1-pa-imk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,6 +152,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

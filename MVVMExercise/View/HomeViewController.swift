@@ -41,12 +41,15 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        homeVM.naviagateToDetailsVC(SELF: self, user: homeVM.users[indexPath.row])
+        let vc: DetailsViewController = Storyboard.Main.load.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        vc.user = homeVM.users[indexPath.row]
+        vc.delegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension HomeViewController: HomeDelegate {
-    func didUsersLoaded() {
+    func didLoadUsers() {
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else{return}
             self.tableView.reloadData()
@@ -54,5 +57,11 @@ extension HomeViewController: HomeDelegate {
     }
     func didErrorInLoadingUsers(msg: String) {
         //Show Error
+    }
+}
+
+extension HomeViewController: DetailDelegate{
+    func didUpdateUsersData(user: User) {
+        homeVM.updateUserById(user: user)
     }
 }
