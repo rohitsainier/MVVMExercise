@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		225EF75825EB930900C6E605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF75725EB930900C6E605 /* AppDelegate.swift */; };
-		225EF75A25EB930900C6E605 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF75925EB930900C6E605 /* SceneDelegate.swift */; };
-		225EF75C25EB930900C6E605 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF75B25EB930900C6E605 /* ViewController.swift */; };
 		225EF75F25EB930900C6E605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225EF75D25EB930900C6E605 /* Main.storyboard */; };
 		225EF76125EB930C00C6E605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225EF76025EB930C00C6E605 /* Assets.xcassets */; };
 		225EF76425EB930C00C6E605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225EF76225EB930C00C6E605 /* LaunchScreen.storyboard */; };
 		225EF76F25EB930C00C6E605 /* MVVMExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF76E25EB930C00C6E605 /* MVVMExerciseTests.swift */; };
 		225EF77A25EB930D00C6E605 /* MVVMExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF77925EB930D00C6E605 /* MVVMExerciseUITests.swift */; };
+		225EF7A125EB942300C6E605 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF79F25EB942300C6E605 /* Service.swift */; };
+		225EF7A225EB942300C6E605 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF7A025EB942300C6E605 /* Enums.swift */; };
+		225EF7A725EB943D00C6E605 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF7A625EB943D00C6E605 /* HomeModel.swift */; };
+		225EF7AC25EB948700C6E605 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF7AB25EB948700C6E605 /* HomeViewController.swift */; };
+		225EF7B125EB949300C6E605 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF7B025EB949300C6E605 /* DetailsViewController.swift */; };
+		225EF7B825EB94C600C6E605 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF7B625EB94C600C6E605 /* HomeCell.swift */; };
+		225EF7B925EB94C600C6E605 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225EF7B725EB94C600C6E605 /* HomeCell.xib */; };
+		225EF7BE25EB94F300C6E605 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EF7BD25EB94F300C6E605 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +43,6 @@
 /* Begin PBXFileReference section */
 		225EF75425EB930900C6E605 /* MVVMExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225EF75725EB930900C6E605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		225EF75925EB930900C6E605 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		225EF75B25EB930900C6E605 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		225EF75E25EB930900C6E605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		225EF76025EB930C00C6E605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		225EF76325EB930C00C6E605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		225EF77525EB930C00C6E605 /* MVVMExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		225EF77925EB930D00C6E605 /* MVVMExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMExerciseUITests.swift; sourceTree = "<group>"; };
 		225EF77B25EB930D00C6E605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225EF79F25EB942300C6E605 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		225EF7A025EB942300C6E605 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		225EF7A625EB943D00C6E605 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		225EF7AB25EB948700C6E605 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		225EF7B025EB949300C6E605 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		225EF7B625EB94C600C6E605 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		225EF7B725EB94C600C6E605 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		225EF7BD25EB94F300C6E605 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +111,13 @@
 		225EF75625EB930900C6E605 /* MVVMExercise */ = {
 			isa = PBXGroup;
 			children = (
-				225EF75725EB930900C6E605 /* AppDelegate.swift */,
-				225EF75925EB930900C6E605 /* SceneDelegate.swift */,
-				225EF75B25EB930900C6E605 /* ViewController.swift */,
-				225EF75D25EB930900C6E605 /* Main.storyboard */,
+				225EF7B525EB94C600C6E605 /* Xib */,
+				225EF79E25EB942300C6E605 /* ProjectHelper */,
+				225EF79625EB934400C6E605 /* Storyboard */,
+				225EF79225EB932F00C6E605 /* ViewModel */,
+				225EF79125EB932900C6E605 /* View */,
+				225EF78A25EB932300C6E605 /* Model */,
+				225EF79725EB935900C6E605 /* App */,
 				225EF76025EB930C00C6E605 /* Assets.xcassets */,
 				225EF76225EB930C00C6E605 /* LaunchScreen.storyboard */,
 				225EF76525EB930C00C6E605 /* Info.plist */,
@@ -126,6 +141,65 @@
 				225EF77B25EB930D00C6E605 /* Info.plist */,
 			);
 			path = MVVMExerciseUITests;
+			sourceTree = "<group>";
+		};
+		225EF78A25EB932300C6E605 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				225EF7A625EB943D00C6E605 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		225EF79125EB932900C6E605 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				225EF7AB25EB948700C6E605 /* HomeViewController.swift */,
+				225EF7B025EB949300C6E605 /* DetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		225EF79225EB932F00C6E605 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				225EF7BD25EB94F300C6E605 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		225EF79625EB934400C6E605 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				225EF75D25EB930900C6E605 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		225EF79725EB935900C6E605 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				225EF75725EB930900C6E605 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		225EF79E25EB942300C6E605 /* ProjectHelper */ = {
+			isa = PBXGroup;
+			children = (
+				225EF79F25EB942300C6E605 /* Service.swift */,
+				225EF7A025EB942300C6E605 /* Enums.swift */,
+			);
+			path = ProjectHelper;
+			sourceTree = "<group>";
+		};
+		225EF7B525EB94C600C6E605 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				225EF7B625EB94C600C6E605 /* HomeCell.swift */,
+				225EF7B725EB94C600C6E605 /* HomeCell.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +307,7 @@
 			files = (
 				225EF76425EB930C00C6E605 /* LaunchScreen.storyboard in Resources */,
 				225EF76125EB930C00C6E605 /* Assets.xcassets in Resources */,
+				225EF7B925EB94C600C6E605 /* HomeCell.xib in Resources */,
 				225EF75F25EB930900C6E605 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				225EF75C25EB930900C6E605 /* ViewController.swift in Sources */,
+				225EF7AC25EB948700C6E605 /* HomeViewController.swift in Sources */,
+				225EF7B825EB94C600C6E605 /* HomeCell.swift in Sources */,
+				225EF7A725EB943D00C6E605 /* HomeModel.swift in Sources */,
+				225EF7BE25EB94F300C6E605 /* HomeViewModel.swift in Sources */,
 				225EF75825EB930900C6E605 /* AppDelegate.swift in Sources */,
-				225EF75A25EB930900C6E605 /* SceneDelegate.swift in Sources */,
+				225EF7A225EB942300C6E605 /* Enums.swift in Sources */,
+				225EF7A125EB942300C6E605 /* Service.swift in Sources */,
+				225EF7B125EB949300C6E605 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q233F3ZPX;
 				INFOPLIST_FILE = MVVMExercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q233F3ZPX;
 				INFOPLIST_FILE = MVVMExercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
