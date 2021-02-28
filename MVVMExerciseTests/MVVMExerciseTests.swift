@@ -10,13 +10,17 @@ import XCTest
 
 class MVVMExerciseTests: XCTestCase {
 
+    var viewModel: HomeViewModel?
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewModel = HomeViewModel()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewModel = nil
     }
+ 
 
     
     func testUserListResponse() throws {
@@ -55,6 +59,26 @@ class MVVMExerciseTests: XCTestCase {
         XCTAssertEqual(company.name,"Romaguera-Crona")
     }
     
-    
+    func testMarkFavouriteAndUnFavouriteUser() throws{
+        guard
+            let path = Bundle.main.path(forResource: "dummy", ofType: "json")
+        else { fatalError("Can't find dummy.json file") }
+        
+        let data = try Data(contentsOf: URL(fileURLWithPath: path))
+        let response = try JSONDecoder().decode([User].self, from: data)
+        viewModel?.users = response
+        var lastUser = response.last!
+        lastUser.isFavourite = true
+        viewModel?.updateUserById(user: lastUser)
+        
+        //Mark last user Favourite
+        XCTAssertEqual(viewModel?.users.last?.isFavourite, true)
+        
+        //Mark last user Non Favourite
+        lastUser.isFavourite = false
+        viewModel?.updateUserById(user: lastUser)
+        XCTAssertEqual(viewModel?.users.last?.isFavourite, false)
+        
+    }
 
 }

