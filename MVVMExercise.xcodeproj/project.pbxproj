@@ -221,7 +221,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 225EF77E25EB930D00C6E605 /* Build configuration list for PBXNativeTarget "MVVMExercise" */;
 			buildPhases = (
-				DCF8CD184E0AECCBDFAAC43A /* Build Assets Catalog */,
 				225EF75025EB930900C6E605 /* Sources */,
 				225EF75125EB930900C6E605 /* Frameworks */,
 				225EF75225EB930900C6E605 /* Resources */,
@@ -342,33 +341,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-
-	DCF8CD184E0AECCBDFAAC43A /* Build Assets Catalog */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build Assets Catalog";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
-
-\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";			
-		};
-	
-
-	
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		225EF75025EB930900C6E605 /* Sources */ = {
