@@ -56,7 +56,7 @@ class MVVMExerciseTests: XCTestCase {
         let company = response.first!.company!
         
         XCTAssertNotNil(company)
-        XCTAssertEqual(company.name,"Romaguera-Crona")
+        XCTAssertEqual(company.name,"Romaguera-Cron")
     }
     
     func testFetchUser() throws{
