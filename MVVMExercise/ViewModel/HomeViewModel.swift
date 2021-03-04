@@ -12,7 +12,7 @@ protocol DetailDelegate {
 }
 
 
-protocol HomeDelegate {
+protocol HomeDelegate:class {
     func didLoadUsers()
     func didErrorInLoadingUsers(msg:String)
 }
@@ -24,8 +24,8 @@ protocol HomeUseCases {
 }
 
 class HomeViewModel{
-    var users: [User] = [User]()
-    var delegate:HomeDelegate?
+    private var users: [User] = [User]()
+    weak var delegate:HomeDelegate?
 }
 
 extension HomeViewModel:HomeUseCases{
