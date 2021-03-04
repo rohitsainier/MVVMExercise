@@ -22,16 +22,27 @@ jobs:
       run:  xcodebuild clean build test -project MVVMExercise.xcodeproj -scheme "MVVMExercise" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
     - name: Install gpg
       run: brew install gnupg
+    - name: Change decrypt_secrets permissions
+      run: chmod +x ./.github/secrets/decrypt_secrets.sh
     - name: Setup provisioning profile
       env:
         IOS_KEYS: ${{ secrets.IOS_KEYS }}
       run: ./.github/secrets/decrypt_secrets.sh
+
+    - name: Change archive_app permissions
+      run: chmod +x ./.github/scripts/archive_app.sh  
     - name: Archiving project
       env:
         PR_NUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
       run: ./.github/scripts/archive_app.sh
+
+    - name: Change export_ipa permissions
+      run: chmod +x ./.github/scripts/export_ipa.sh  
     - name: Exporting .ipa
       run: ./.github/scripts/export_ipa.sh
+      
+    - name: Change publish_testflight permissions
+      run: chmod +x ./.github/scripts/publish_testflight.sh    
     - name: Publishing app
       if: success()
       env:
