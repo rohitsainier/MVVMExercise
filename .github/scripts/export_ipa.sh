@@ -3,7 +3,7 @@
 set -eo pipefail
 
 xcodebuild -archivePath $PWD/build/MVVMExercise.xcarchive \
-            -exportOptionsPlist MVVMExercise/MVVMExercise\ iOS/exportOptions.plist \
+            -exportOptionsPlist MVVMExercise/MVVMExercise/exportOptions.plist \
             -exportPath $PWD/build \
             -allowProvisioningUpdates \
             -exportArchive | xcpretty
