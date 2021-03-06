@@ -245,7 +245,6 @@
 				225EF75225EB930900C6E605 /* Resources */,
 			);
 			buildRules = (
-				8376E1A98787CFD53CAAC43A /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
