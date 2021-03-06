@@ -26,6 +26,7 @@ protocol HomeUseCases {
 class HomeViewModel{
     var users: [User] = [User]()
     weak var delegate:HomeDelegate?
+    
 }
 
 extension HomeViewModel:HomeUseCases{
