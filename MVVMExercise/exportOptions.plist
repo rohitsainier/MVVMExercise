@@ -11,7 +11,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.app.MVVMExercise</key>
-		<string>match MVVMExercise com.app.MVVMExercise</string>
+		<string>PublishAppStore</string>
 	</dict>
 </dict>
 </plist>
