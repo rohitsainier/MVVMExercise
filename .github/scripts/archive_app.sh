@@ -3,7 +3,7 @@
 set -eo pipefail
 
 xcodebuild -project MVVMExercise.xcodeproj \
-            -scheme MVVMExercise\ iOS \
+            -scheme MVVMExercise \
             -sdk iphoneos \
             -configuration AppStoreDistribution \
             -archivePath $PWD/build/MVVMExercise.xcarchive \
