@@ -21,7 +21,6 @@ class MVVMExerciseTests: XCTestCase {
         viewModel = nil
     }
  
-
     
     func testUserListResponse() throws {
         guard

@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="LjH-sR-nmv">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="pF3-vO-rWi" customClass="HomeViewController" customModule="VIPERExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="pF3-vO-rWi" customClass="HomeViewController" customModule="MVVMExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ldv-6q-AOd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
         <!--Details View Controller-->
         <scene sceneID="rD7-3P-ba2">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" id="fRr-v6-Hl5" customClass="DetailsViewController" customModule="VIPERExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="fRr-v6-Hl5" customClass="DetailsViewController" customModule="MVVMExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5hR-7m-98I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

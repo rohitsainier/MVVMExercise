@@ -7,7 +7,9 @@
 
 import UIKit
 
-class HomeCell: UITableViewCell {
+
+
+class HomeCell: UITableViewCell{
 
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var starImg: UIImageView!
